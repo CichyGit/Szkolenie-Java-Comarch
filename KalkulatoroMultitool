@@ -11,6 +11,8 @@ public class Main {
 	static int G;
 	static float spalanie;
 	static float CenaPaliwa;
+	static float Total;
+	static float kilometry;
 	public static void main(String[] args) {
 
 		ListaProgramow();
@@ -146,8 +148,14 @@ public class Main {
 		System.out.println("Podaj Cene za litr");
 		Scanner input1 = new Scanner(System.in);
 		CenaPaliwa = input1.nextFloat();
+		Total = spalanie * CenaPaliwa / 100;
+		System.out.println("Cena za kilometr: " + Total);
 		
-		System.out.println("Cena za kilometr: " + (spalanie * CenaPaliwa / 100));
+		System.out.println("Podaj długość trasy w kilometrach");
+		Scanner input2 = new Scanner(System.in);
+		kilometry = input2.nextFloat();
+		Total = Total * kilometry;
+		System.out.println("Cena za całą trasę: " +  Total);
 		
 	}
 	public static void Gaz() {
@@ -157,8 +165,13 @@ public class Main {
 		System.out.println("Podaj Cene za litr");
 		Scanner input1 = new Scanner(System.in);
 		CenaPaliwa = input1.nextFloat();
-		
-		System.out.println("Cena za kilometr: " + (spalanie * CenaPaliwa / 100));
+		Total = spalanie * CenaPaliwa / 100;
+		System.out.println("Cena za kilometr: " + Total);
+		System.out.println("Podaj długość trasy w kilometrach");
+		Scanner input2 = new Scanner(System.in);
+		kilometry = input2.nextFloat();
+		Total = Total * kilometry;
+		System.out.println("Cena za całą trasę: " +  Total);
 	}
 		
 	public static void OlejNapedowy() {
@@ -168,8 +181,16 @@ public class Main {
 			System.out.println("Podaj Cene za litr");
 			Scanner input1 = new Scanner(System.in);
 			CenaPaliwa = input1.nextFloat();
+			Total = spalanie * CenaPaliwa / 100;
+			System.out.println("Cena za kilometr: " + Total);
 			
-			System.out.println("Cena za kilometr: " + (spalanie * CenaPaliwa / 100));
+			System.out.println("Podaj długość trasy w kilometrach");
+			Scanner input2 = new Scanner(System.in);
+			kilometry = input2.nextFloat();
+			Total = Total * kilometry;
+			System.out.println("Cena za całą trasę: " +  Total);
+			
+			
 	}
 		
 			
