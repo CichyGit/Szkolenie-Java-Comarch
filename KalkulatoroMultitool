@@ -1,0 +1,178 @@
+package com.jc;
+import java.util.Scanner;
+
+
+public class Main {
+	static int P = 0;
+	static int X;
+	static String cos;
+	static int Z = 0;
+	static int T;
+	static int G;
+	static float spalanie;
+	static float CenaPaliwa;
+	public static void main(String[] args) {
+
+		ListaProgramow();
+	}
+
+		
+	
+	
+	public static void ListaProgramow() {
+		
+		System.out.println("Wybierz Program: ");
+		System.out.println("1. Kalkulator");
+		System.out.println("2. Konwerer");
+		Scanner input = new Scanner(System.in);
+		P = input.nextInt();
+		
+		if (P == 1) {
+			Kalkulator();
+		}
+		if (P == 2) {
+			Konwerter();
+		}
+		else System.out.println("Bledna wartosc");
+
+	}
+	
+	
+	public static void Kalkulator() {
+		PodajLiczbe();
+	}
+	
+	public static void PodajLiczbe() {
+		System.out.println(X);
+		
+		if (Z == 0) {
+		Scanner input = new Scanner(System.in);
+		X = input.nextInt();
+		}
+		Scanner input1 = new Scanner(System.in);
+		cos = input1.next();
+
+		if (cos.equals("+") ) {
+	
+			Dodawanie();			
+		}
+		if (cos.equals("-")) {
+			Odejmowanie();			
+		}
+		if (cos.equals("*")) {
+			Mnozenie();			
+		}
+
+		if (cos.equals("/")) {
+			Dzielenie();			
+		}
+		else System.out.println("Bledna wartosc");
+
+
+		
+	}
+	public static void Dodawanie() {
+
+		Scanner input = new Scanner(System.in);
+		int Y = input.nextInt();
+		X = X + Y;
+		Z++;
+		PodajLiczbe();
+	}
+	
+	public static void Odejmowanie() {
+		Scanner input = new Scanner(System.in);
+		int Y = input.nextInt();
+		X = X - Y;
+		Z++;
+		PodajLiczbe();
+	}
+	public static void Mnozenie() {
+		Scanner input = new Scanner(System.in);
+		int Y = input.nextInt();
+		X = X * Y;
+		Z++;
+		PodajLiczbe();
+	}
+	public static void Dzielenie() {
+		Scanner input = new Scanner(System.in);
+		int Y = input.nextInt();
+		X = X / Y;
+		Z++;
+		PodajLiczbe();
+	}
+	
+	public static void Konwerter() {
+		
+		System.out.println("Wybierz zmianę: ");
+		System.out.println("1. Koszt na Kilometr");
+		System.out.println("2. x");
+		Scanner input = new Scanner(System.in);
+		int T = input.nextInt();
+		if (T == 1) {
+			KosztPerKm();
+		}
+		
+		
+	}
+	public static void KosztPerKm() {
+		System.out.println("Rodzaj Paliwa");
+		System.out.println("1. Benzyna");
+		System.out.println("2. Gaz");
+		System.out.println("3. Olej Napędowy");
+		
+		
+		Scanner input = new Scanner(System.in);
+		G = input.nextInt();
+		if (G == 1) {
+			Benzyna();
+		}
+		if (G == 2) {
+			Gaz();
+			
+		}
+		if (G == 3) {
+			OlejNapedowy();
+		}
+		if (G > 3) {
+			System.out.println("Błąd");
+		}
+		
+	}
+	public static void Benzyna() {
+		System.out.println("Podaj Spalanie na 100km");
+		Scanner input = new Scanner(System.in);
+		spalanie = input.nextFloat();
+		System.out.println("Podaj Cene za litr");
+		Scanner input1 = new Scanner(System.in);
+		CenaPaliwa = input1.nextFloat();
+		
+		System.out.println("Cena za kilometr: " + (spalanie * CenaPaliwa / 100));
+		
+	}
+	public static void Gaz() {
+		System.out.println("Podaj Spalanie na 100km");
+		Scanner input = new Scanner(System.in);
+		spalanie = input.nextFloat();
+		System.out.println("Podaj Cene za litr");
+		Scanner input1 = new Scanner(System.in);
+		CenaPaliwa = input1.nextFloat();
+		
+		System.out.println("Cena za kilometr: " + (spalanie * CenaPaliwa / 100));
+	}
+		
+	public static void OlejNapedowy() {
+			System.out.println("Podaj Spalanie na 100km");
+			Scanner input = new Scanner(System.in);
+			spalanie = input.nextFloat();
+			System.out.println("Podaj Cene za litr");
+			Scanner input1 = new Scanner(System.in);
+			CenaPaliwa = input1.nextFloat();
+			
+			System.out.println("Cena za kilometr: " + (spalanie * CenaPaliwa / 100));
+	}
+		
+			
+}
+	
+
